@@ -8,10 +8,6 @@ import io.vertx.core.json.JsonObject;
 @JsonWriter
 public record UpdatePermissionsResponseDto() {
 
-  public UpdatePermissionsResponseDto(JsonObject ignore) {
-    this();
-  }
-
   public static UpdatePermissionsResponseDto fromJson(JsonObject ignore) {
     return new UpdatePermissionsResponseDto();
   }

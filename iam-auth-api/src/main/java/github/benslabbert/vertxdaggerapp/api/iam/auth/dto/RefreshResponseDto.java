@@ -9,9 +9,6 @@ import java.util.Objects;
 @JsonWriter
 public record RefreshResponseDto(String token, String refreshToken) {
 
-  public static String TOKEN_FIELD = "token";
-  public static String REFRESH_TOKEN_FIELD = "refreshToken";
-
   public RefreshResponseDto {
     Objects.requireNonNull(token);
     Objects.requireNonNull(refreshToken);
