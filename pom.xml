@@ -33,7 +33,7 @@
 
   <properties>
     <!--deps-->
-    <jsonwriter.version>1.12.0</jsonwriter.version>
+    <jsonwriter.version>1.15.0</jsonwriter.version>
     <vertx-dagger-commons.version>1.18.0</vertx-dagger-commons.version>
     <vertx-dagger-codegen.version>1.18.0</vertx-dagger-codegen.version>
   </properties>
