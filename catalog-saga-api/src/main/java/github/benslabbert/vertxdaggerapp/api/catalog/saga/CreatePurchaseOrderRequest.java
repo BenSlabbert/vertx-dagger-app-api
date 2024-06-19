@@ -4,9 +4,10 @@ package github.benslabbert.vertxdaggerapp.api.catalog.saga;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import jakarta.validation.constraints.NotBlank;
 
 @JsonWriter
-public record CreatePurchaseOrderRequest(String sagaId) {
+public record CreatePurchaseOrderRequest(@NotBlank String sagaId) {
 
   public static final String CREATE_PURCHASE_ORDER_TOPIC = "Saga.Catalog.CreatePurchaseOrder";
 

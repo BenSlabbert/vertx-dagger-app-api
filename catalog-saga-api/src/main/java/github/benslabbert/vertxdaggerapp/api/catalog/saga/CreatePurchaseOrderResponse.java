@@ -4,11 +4,12 @@ package github.benslabbert.vertxdaggerapp.api.catalog.saga;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import jakarta.validation.constraints.NotBlank;
 import javax.annotation.Nullable;
 
 @JsonWriter
 public record CreatePurchaseOrderResponse(
-    String sagaId,
+    @NotBlank String sagaId,
     @Nullable CreatePurchaseOrderFailedResponse failedResponse,
     @Nullable CreatePurchaseOrderSuccessResponse successResponse) {
 

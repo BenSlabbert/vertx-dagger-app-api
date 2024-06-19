@@ -4,9 +4,10 @@ package github.benslabbert.vertxdaggerapp.api.rpc.warehouse.dto;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import jakarta.validation.constraints.NotBlank;
 
 @JsonWriter
-public record GetNextDeliveryJobRequestDto(String truckId) {
+public record GetNextDeliveryJobRequestDto(@NotBlank String truckId) {
 
   public static Builder builder() {
     return new AutoBuilder_GetNextDeliveryJobRequestDto_Builder();

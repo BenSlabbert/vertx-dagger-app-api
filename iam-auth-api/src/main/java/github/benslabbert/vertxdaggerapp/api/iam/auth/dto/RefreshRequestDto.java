@@ -9,10 +9,11 @@ import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import io.vertx.json.schema.JsonSchema;
+import jakarta.validation.constraints.NotBlank;
 import java.util.Objects;
 
 @JsonWriter
-public record RefreshRequestDto(String username, String token) {
+public record RefreshRequestDto(@NotBlank String username, @NotBlank String token) {
 
   public static String USERNAME_FIELD = "username";
   public static String TOKEN_FIELD = "token";

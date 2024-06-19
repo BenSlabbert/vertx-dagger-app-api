@@ -4,10 +4,11 @@ package github.benslabbert.vertxdaggerapp.api.iam.auth.dto;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import jakarta.validation.constraints.NotBlank;
 import java.util.Objects;
 
 @JsonWriter
-public record RefreshResponseDto(String token, String refreshToken) {
+public record RefreshResponseDto(@NotBlank String token, @NotBlank String refreshToken) {
 
   public RefreshResponseDto {
     Objects.requireNonNull(token);

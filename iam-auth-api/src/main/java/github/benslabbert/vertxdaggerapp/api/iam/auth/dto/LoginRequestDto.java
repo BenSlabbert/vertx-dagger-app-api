@@ -9,10 +9,11 @@ import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import io.vertx.json.schema.JsonSchema;
+import jakarta.validation.constraints.NotBlank;
 import java.util.Objects;
 
 @JsonWriter
-public record LoginRequestDto(String username, String password) {
+public record LoginRequestDto(@NotBlank String username, @NotBlank String password) {
 
   public static String USERNAME_FIELD = "username";
   public static String PASSWORD_FIELD = "password";

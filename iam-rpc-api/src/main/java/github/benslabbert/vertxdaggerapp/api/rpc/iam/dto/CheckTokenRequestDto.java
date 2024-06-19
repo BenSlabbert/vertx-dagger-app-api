@@ -4,9 +4,10 @@ package github.benslabbert.vertxdaggerapp.api.rpc.iam.dto;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import jakarta.validation.constraints.NotBlank;
 
 @JsonWriter
-public record CheckTokenRequestDto(String token) {
+public record CheckTokenRequestDto(@NotBlank String token) {
 
   public static Builder builder() {
     return new AutoBuilder_CheckTokenRequestDto_Builder();

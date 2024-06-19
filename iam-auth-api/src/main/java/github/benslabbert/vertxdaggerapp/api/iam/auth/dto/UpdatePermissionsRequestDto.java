@@ -9,9 +9,11 @@ import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import io.vertx.json.schema.JsonSchema;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @JsonWriter
-public record UpdatePermissionsRequestDto(String username, Access access) {
+public record UpdatePermissionsRequestDto(@NotBlank String username, @NotNull Access access) {
 
   public static String USERNAME_FIELD = "username";
   public static String ACCESS_FIELD = "access";

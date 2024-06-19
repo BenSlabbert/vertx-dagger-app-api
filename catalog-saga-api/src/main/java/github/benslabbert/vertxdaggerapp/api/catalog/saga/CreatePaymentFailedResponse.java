@@ -4,9 +4,10 @@ package github.benslabbert.vertxdaggerapp.api.catalog.saga;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import jakarta.validation.constraints.NotBlank;
 
 @JsonWriter
-public record CreatePaymentFailedResponse(String sagaId) {
+public record CreatePaymentFailedResponse(@NotBlank String sagaId) {
 
   public static Builder builder() {
     return new AutoBuilder_CreatePaymentFailedResponse_Builder();
