@@ -4,6 +4,7 @@ package github.benslabbert.vertxdaggerapp.api.rpc.warehouse.dto;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import java.util.Set;
 import javax.annotation.Nullable;
 
 @JsonWriter
@@ -15,6 +16,10 @@ public record GetNextDeliveryJobResponseDto(@Nullable Long deliveryId) {
 
   public static GetNextDeliveryJobResponseDto fromJson(JsonObject json) {
     return GetNextDeliveryJobResponseDto_JsonWriter.fromJson(json);
+  }
+
+  public static Set<String> missingRequiredFields(JsonObject json) {
+    return GetNextDeliveryJobResponseDto_JsonWriter.missingRequiredFields(json);
   }
 
   public JsonObject toJson() {

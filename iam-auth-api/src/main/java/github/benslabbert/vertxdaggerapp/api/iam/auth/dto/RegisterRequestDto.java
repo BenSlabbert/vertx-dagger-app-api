@@ -12,6 +12,7 @@ import io.vertx.json.schema.JsonSchema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import java.util.Objects;
+import java.util.Set;
 
 @JsonWriter
 public record RegisterRequestDto(
@@ -37,6 +38,10 @@ public record RegisterRequestDto(
 
   public static RegisterRequestDto fromJson(JsonObject json) {
     return RegisterRequestDto_JsonWriter.fromJson(json);
+  }
+
+  public static Set<String> missingRequiredFields(JsonObject json) {
+    return RegisterRequestDto_JsonWriter.missingRequiredFields(json);
   }
 
   public JsonObject toJson() {

@@ -11,6 +11,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.json.schema.JsonSchema;
 import jakarta.validation.constraints.NotBlank;
 import java.util.Objects;
+import java.util.Set;
 
 @JsonWriter
 public record RefreshRequestDto(@NotBlank String username, @NotBlank String token) {
@@ -32,6 +33,10 @@ public record RefreshRequestDto(@NotBlank String username, @NotBlank String toke
 
   public static RefreshRequestDto fromJson(JsonObject json) {
     return RefreshRequestDto_JsonWriter.fromJson(json);
+  }
+
+  public static Set<String> missingRequiredFields(JsonObject json) {
+    return RefreshRequestDto_JsonWriter.missingRequiredFields(json);
   }
 
   public JsonObject toJson() {
