@@ -5,6 +5,7 @@ import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import jakarta.validation.constraints.NotBlank;
+import java.util.Set;
 
 @JsonWriter
 public record CreatePaymentRequest(@NotBlank String sagaId) {
@@ -17,6 +18,10 @@ public record CreatePaymentRequest(@NotBlank String sagaId) {
 
   public static CreatePaymentRequest fromJson(JsonObject json) {
     return CreatePaymentRequest_JsonWriter.fromJson(json);
+  }
+
+  public static Set<String> missingRequiredFields(JsonObject json) {
+    return CreatePaymentRequest.missingRequiredFields(json);
   }
 
   public JsonObject toJson() {
