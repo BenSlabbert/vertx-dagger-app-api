@@ -5,6 +5,7 @@ import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import jakarta.validation.constraints.NotBlank;
+import java.util.Set;
 import javax.annotation.Nullable;
 
 @JsonWriter
@@ -23,6 +24,10 @@ public record CreatePurchaseOrderResponse(
 
   public JsonObject toJson() {
     return CreatePurchaseOrderResponse_JsonWriter.toJson(this);
+  }
+
+  public static Set<String> missingRequiredFields(JsonObject json) {
+    return CreatePurchaseOrderResponse_JsonWriter.missingRequiredFields(json);
   }
 
   public CreatePurchaseOrderResponse {
