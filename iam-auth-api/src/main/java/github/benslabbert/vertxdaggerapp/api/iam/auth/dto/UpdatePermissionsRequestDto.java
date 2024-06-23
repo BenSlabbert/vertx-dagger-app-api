@@ -11,6 +11,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.json.schema.JsonSchema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import java.util.Set;
 
 @JsonWriter
 public record UpdatePermissionsRequestDto(@NotBlank String username, @NotNull Access access) {
@@ -27,6 +28,10 @@ public record UpdatePermissionsRequestDto(@NotBlank String username, @NotNull Ac
 
   public static UpdatePermissionsRequestDto fromJson(JsonObject json) {
     return UpdatePermissionsRequestDto_JsonWriter.fromJson(json);
+  }
+
+  public static Set<String> missingRequiredFields(JsonObject json) {
+    return UpdatePermissionsRequestDto_JsonWriter.missingRequiredFields(json);
   }
 
   public JsonObject toJson() {

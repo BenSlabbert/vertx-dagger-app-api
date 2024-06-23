@@ -6,6 +6,7 @@ import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import jakarta.validation.constraints.NotBlank;
 import java.util.Objects;
+import java.util.Set;
 
 @JsonWriter
 public record RefreshResponseDto(@NotBlank String token, @NotBlank String refreshToken) {
@@ -17,6 +18,10 @@ public record RefreshResponseDto(@NotBlank String token, @NotBlank String refres
 
   public static RefreshResponseDto fromJson(JsonObject json) {
     return RefreshResponseDto_JsonWriter.fromJson(json);
+  }
+
+  public static Set<String> missingRequiredFields(JsonObject json) {
+    return RefreshResponseDto_JsonWriter.missingRequiredFields(json);
   }
 
   public JsonObject toJson() {

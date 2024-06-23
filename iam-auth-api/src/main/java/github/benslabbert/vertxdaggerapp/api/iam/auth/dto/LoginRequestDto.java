@@ -11,6 +11,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.json.schema.JsonSchema;
 import jakarta.validation.constraints.NotBlank;
 import java.util.Objects;
+import java.util.Set;
 
 @JsonWriter
 public record LoginRequestDto(@NotBlank String username, @NotBlank String password) {
@@ -32,6 +33,10 @@ public record LoginRequestDto(@NotBlank String username, @NotBlank String passwo
 
   public static LoginRequestDto fromJson(JsonObject json) {
     return LoginRequestDto_JsonWriter.fromJson(json);
+  }
+
+  public static Set<String> missingRequiredFields(JsonObject json) {
+    return LoginRequestDto_JsonWriter.missingRequiredFields(json);
   }
 
   public JsonObject toJson() {
