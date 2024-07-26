@@ -33,9 +33,9 @@
 
   <properties>
     <!--deps-->
-    <jsonwriter.version>1.32.0</jsonwriter.version>
-    <vertx-dagger-commons.version>1.44.0</vertx-dagger-commons.version>
-    <vertx-dagger-codegen.version>1.47.0</vertx-dagger-codegen.version>
+    <jsonwriter.version>1.33.0</jsonwriter.version>
+    <vertx-dagger-commons.version>1.45.0</vertx-dagger-commons.version>
+    <vertx-dagger-codegen.version>1.48.0</vertx-dagger-codegen.version>
   </properties>
 
   <dependencyManagement>
