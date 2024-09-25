@@ -4,17 +4,12 @@ package github.benslabbert.vertxdaggerapp.api.iam.auth.dto;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
-import java.util.Set;
 
 @JsonWriter
 public record RegisterResponseDto() {
 
   public static RegisterResponseDto fromJson(JsonObject ignore) {
     return new RegisterResponseDto();
-  }
-
-  public static Set<String> missingRequiredFields(JsonObject json) {
-    return Set.of();
   }
 
   public JsonObject toJson() {
