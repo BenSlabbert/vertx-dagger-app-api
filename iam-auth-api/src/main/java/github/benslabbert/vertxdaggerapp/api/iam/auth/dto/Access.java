@@ -79,32 +79,6 @@ public abstract class Access {
     return builder.build();
   }
 
-  public static ImmutableSet<String> missingRequiredFields(JsonObject json) {
-    ImmutableSet.Builder<String> builder = ImmutableSet.builder();
-    if (null == json.getString(GROUP_FIELD)) {
-      builder.add(GROUP_FIELD);
-    }
-    if (null == json.getString(ROLE_FIELD)) {
-      builder.add(ROLE_FIELD);
-    }
-    if (null == json.getJsonArray(PERMISSIONS_FIELD)) {
-      builder.add(PERMISSIONS_FIELD);
-    } else {
-      JsonArray array = json.getJsonArray(PERMISSIONS_FIELD);
-      if (array.isEmpty()) {
-        builder.add(PERMISSIONS_FIELD);
-      } else {
-        for (Object o : array) {
-          if (!(o instanceof String)) {
-            builder.add(PERMISSIONS_FIELD);
-            break;
-          }
-        }
-      }
-    }
-    return builder.build();
-  }
-
   @AutoValue.Builder
   public abstract static class Builder {
 

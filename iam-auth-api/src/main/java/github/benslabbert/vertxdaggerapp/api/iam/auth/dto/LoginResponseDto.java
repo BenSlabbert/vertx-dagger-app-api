@@ -6,7 +6,6 @@ import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import jakarta.validation.constraints.NotBlank;
 import java.util.Objects;
-import java.util.Set;
 
 @JsonWriter
 public record LoginResponseDto(@NotBlank String token, @NotBlank String refreshToken) {
@@ -26,10 +25,6 @@ public record LoginResponseDto(@NotBlank String token, @NotBlank String refreshT
 
   public static Builder builder() {
     return new AutoBuilder_LoginResponseDto_Builder();
-  }
-
-  public static Set<String> missingRequiredFields(JsonObject json) {
-    return LoginResponseDto_JsonWriter.missingRequiredFields(json);
   }
 
   @AutoBuilder

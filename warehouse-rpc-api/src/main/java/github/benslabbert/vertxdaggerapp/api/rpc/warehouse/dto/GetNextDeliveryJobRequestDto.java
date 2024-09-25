@@ -5,7 +5,6 @@ import com.google.auto.value.AutoBuilder;
 import github.benslabbert.jsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import jakarta.validation.constraints.NotBlank;
-import java.util.Set;
 
 @JsonWriter
 public record GetNextDeliveryJobRequestDto(@NotBlank String truckId) {
@@ -16,10 +15,6 @@ public record GetNextDeliveryJobRequestDto(@NotBlank String truckId) {
 
   public static GetNextDeliveryJobRequestDto fromJson(JsonObject json) {
     return GetNextDeliveryJobRequestDto_JsonWriter.fromJson(json);
-  }
-
-  public static Set<String> missingRequiredFields(JsonObject json) {
-    return GetNextDeliveryJobRequestDto_JsonWriter.missingRequiredFields(json);
   }
 
   public JsonObject toJson() {
