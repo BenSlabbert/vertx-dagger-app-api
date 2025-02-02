@@ -16,11 +16,6 @@ registries:
     url: "https://maven.pkg.github.com/BenSlabbert/vertx-dagger-codegen"
     username: "BenSlabbert"
     password: "${{ secrets.GH_TOKEN }}"
-  vertx-dagger-commons:
-    type: "maven-repository"
-    url: "https://maven.pkg.github.com/BenSlabbert/vertx-dagger-commons"
-    username: "BenSlabbert"
-    password: "${{ secrets.GH_TOKEN }}"
   vertx-json-writer:
     type: "maven-repository"
     url: "https://maven.pkg.github.com/BenSlabbert/vertx-json-writer"
@@ -36,7 +31,6 @@ updates:
   - "vertx-dagger-bom"
   - "git-version-extension"
   - "vertx-dagger-codegen"
-  - "vertx-dagger-commons"
   - "vertx-json-writer"
   labels:
   - "dependencies"
