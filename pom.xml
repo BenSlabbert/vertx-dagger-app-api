@@ -34,7 +34,6 @@
   <properties>
     <!--deps-->
     <jsonwriter.version>1.57.0</jsonwriter.version>
-    <vertx-dagger-commons.version>1.77.0</vertx-dagger-commons.version>
     <vertx-dagger-codegen.version>1.52.0</vertx-dagger-codegen.version>
   </properties>
 
@@ -64,11 +63,6 @@
         <groupId>github.benslabbert.vertx-dagger-codegen</groupId>
         <artifactId>processor</artifactId>
         <version>${vertx-dagger-codegen.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>github.benslabbert.vertx-dagger-commons</groupId>
-        <artifactId>commons</artifactId>
-        <version>${vertx-dagger-commons.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
