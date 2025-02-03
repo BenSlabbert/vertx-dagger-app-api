@@ -21,6 +21,7 @@
     <module>iam-rpc-api</module>
     <module>warehouse-rpc-api</module>
     <module>catalog-saga-api</module>
+    <module>bom</module>
   </modules>
 
   <distributionManagement>
