@@ -2,7 +2,7 @@
 package github.benslabbert.vertxdaggerapp.api.rpc.iam.dto;
 
 import com.google.auto.value.AutoBuilder;
-import github.benslabbert.jsonwriter.annotation.JsonWriter;
+import github.benslabbert.vertxjsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

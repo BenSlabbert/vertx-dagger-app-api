@@ -17,7 +17,7 @@
       <optional>true</optional>
     </dependency>
     <dependency>
-      <groupId>github.benslabbert.jsonwriter</groupId>
+      <groupId>github.benslabbert.vertx-json-writer</groupId>
       <artifactId>annotation</artifactId>
     </dependency>
     <dependency>
@@ -57,9 +57,9 @@
               <version>${google-auto-value.version}</version>
             </path>
             <path>
-              <groupId>github.benslabbert.jsonwriter</groupId>
+              <groupId>github.benslabbert.vertx-json-writer</groupId>
               <artifactId>processor</artifactId>
-              <version>${jsonwriter.version}</version>
+              <version>${vertx-json-writer.version}</version>
             </path>
           </annotationProcessorPaths>
         </configuration>
