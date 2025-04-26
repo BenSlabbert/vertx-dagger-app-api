@@ -35,7 +35,7 @@
   <properties>
     <!--deps-->
     <vertx-json-writer.version>1.95.0</vertx-json-writer.version>
-    <vertx-dagger-codegen.version>1.55.0</vertx-dagger-codegen.version>
+    <vertx-dagger-codegen.version>2.1.0</vertx-dagger-codegen.version>
   </properties>
 
   <dependencyManagement>
