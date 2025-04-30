@@ -6,7 +6,6 @@ import static io.netty.handler.codec.http.HttpResponseStatus.UNAUTHORIZED;
 import github.benslabbert.vertxdaggerapp.api.rpc.iam.dto.CheckTokenRequestDto;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Future;
-import io.vertx.core.Handler;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.auth.User;
 import io.vertx.ext.auth.authentication.AuthenticationProvider;
@@ -24,11 +23,6 @@ class IamRpcServiceAuthenticationProvider implements AuthenticationProvider {
   @Inject
   IamRpcServiceAuthenticationProvider(IamRpcService iamRpcService) {
     this.iamRpcService = iamRpcService;
-  }
-
-  @Override
-  public void authenticate(JsonObject token, Handler<AsyncResult<User>> var2) {
-    throw new UnsupportedOperationException("deprecated method not implemented");
   }
 
   @Override
