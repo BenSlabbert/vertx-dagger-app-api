@@ -9,8 +9,6 @@ import jakarta.validation.constraints.NotBlank;
 @JsonWriter
 public record CreatePurchaseOrderRequest(@NotBlank String sagaId) {
 
-  public static final String CREATE_PURCHASE_ORDER_TOPIC = "Saga.Catalog.CreatePurchaseOrder";
-
   public static Builder builder() {
     return new AutoBuilder_CreatePurchaseOrderRequest_Builder();
   }

@@ -4,6 +4,8 @@ package github.benslabbert.vertxdaggerapp.api.catalog.saga;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.vertxjsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import io.vertx.json.schema.JsonSchema;
+import io.vertx.json.schema.common.dsl.ObjectSchemaBuilder;
 import jakarta.validation.constraints.NotBlank;
 
 @JsonWriter
@@ -19,6 +21,14 @@ public record CreatePurchaseOrderSuccessResponse(@NotBlank String sagaId) {
 
   public JsonObject toJson() {
     return CreatePurchaseOrderSuccessResponse_JsonWriter.toJson(this);
+  }
+
+  public static JsonSchema schema() {
+    return CreatePurchaseOrderSuccessResponse_JsonWriter.schema();
+  }
+
+  public static ObjectSchemaBuilder schemaBuilder() {
+    return CreatePurchaseOrderSuccessResponse_JsonWriter.schemaBuilder();
   }
 
   @AutoBuilder

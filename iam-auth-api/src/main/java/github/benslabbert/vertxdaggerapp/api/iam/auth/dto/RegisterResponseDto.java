@@ -4,6 +4,7 @@ package github.benslabbert.vertxdaggerapp.api.iam.auth.dto;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.vertxjsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import io.vertx.json.schema.JsonSchema;
 
 @JsonWriter
 public record RegisterResponseDto() {
@@ -14,6 +15,10 @@ public record RegisterResponseDto() {
 
   public JsonObject toJson() {
     return new JsonObject();
+  }
+
+  public static JsonSchema schema() {
+    return JsonSchema.of(new JsonObject());
   }
 
   public static Builder builder() {

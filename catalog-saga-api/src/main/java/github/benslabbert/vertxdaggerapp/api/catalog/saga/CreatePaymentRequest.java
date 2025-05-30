@@ -4,12 +4,11 @@ package github.benslabbert.vertxdaggerapp.api.catalog.saga;
 import com.google.auto.value.AutoBuilder;
 import github.benslabbert.vertxjsonwriter.annotation.JsonWriter;
 import io.vertx.core.json.JsonObject;
+import io.vertx.json.schema.common.dsl.ObjectSchemaBuilder;
 import jakarta.validation.constraints.NotBlank;
 
 @JsonWriter
 public record CreatePaymentRequest(@NotBlank String sagaId) {
-
-  public static final String CREATE_PAYMENT_TOPIC = "Saga.Catalog.CreatePayment";
 
   public static Builder builder() {
     return new AutoBuilder_CreatePaymentRequest_Builder();
@@ -17,6 +16,10 @@ public record CreatePaymentRequest(@NotBlank String sagaId) {
 
   public static CreatePaymentRequest fromJson(JsonObject json) {
     return CreatePaymentRequest_JsonWriter.fromJson(json);
+  }
+
+  public static ObjectSchemaBuilder schemaBuilder() {
+    return CreatePaymentRequest_JsonWriter.schemaBuilder();
   }
 
   public JsonObject toJson() {
