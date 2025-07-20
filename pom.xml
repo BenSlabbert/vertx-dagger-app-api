@@ -36,6 +36,9 @@
     <!--deps-->
     <vertx-json-writer.version>1.142.0</vertx-json-writer.version>
     <vertx-dagger-codegen.version>2.49.0</vertx-dagger-codegen.version>
+
+    <!--plugins-->
+    <flatten-maven-plugin.version>1.7.0</flatten-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
