@@ -34,7 +34,7 @@
 
   <properties>
     <!--deps-->
-    <vertx-json-writer.version>1.202.0</vertx-json-writer.version>
+    <vertx-json-writer.version>2.4.0</vertx-json-writer.version>
     <vertx-dagger-codegen.version>2.123.0</vertx-dagger-codegen.version>
 
     <!--plugins-->
