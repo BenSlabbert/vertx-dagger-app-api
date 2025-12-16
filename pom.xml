@@ -35,7 +35,7 @@
   <properties>
     <!--deps-->
     <vertx-json-writer.version>1.202.0</vertx-json-writer.version>
-    <vertx-dagger-codegen.version>2.133.0</vertx-dagger-codegen.version>
+    <vertx-dagger-codegen.version>2.134.0</vertx-dagger-codegen.version>
 
     <!--plugins-->
     <flatten-maven-plugin.version>1.7.0</flatten-maven-plugin.version>
